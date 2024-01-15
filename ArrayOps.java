@@ -2,8 +2,8 @@ public class ArrayOps {
     public static void main(String[] args) {
 
         int [] arr = {2,-3,4};
-        int [] array2 = {2,1};
-        int [] array1 = {1,2,1,1,2};
+        int [] array2 = {1,2,3,4,5};
+        int [] array1 = {1,2,3,4,5};
         System.out.println (isSorted (arr));
         System.out.println (findMissingInt (arr));
         System.out.println (secondMaxValue (arr));
@@ -79,7 +79,7 @@ public class ArrayOps {
         int max= Math.max(array1.length,array2.length);
         int min= Math.min(array1.length,array2.length);
 
-        if (array1.length > array2.length)
+        if (array1.length >= array2.length)
         {   while (i < array1.length)
               { isContains= false;
                  for (j=0;j<array2.length;j++)
@@ -94,7 +94,7 @@ public class ArrayOps {
          }
      }
         else
-            if (array2.length > array1.length)
+            if (array2.length >= array1.length)
            { while (i < array2.length)
              { isContains = false;
                 for (j=0;j<array1.length;j++)
@@ -109,6 +109,8 @@ public class ArrayOps {
                     i++;
             }
          }
+
+
      
                 if (isContains==true)
                     return true;
