@@ -23,7 +23,7 @@ public class StringOps {
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
         
-        String string = "   Intro to coMPUter sCIEncE ";
+        String string = "Hello world";
         char chr = 'l';
         System.out.println(capVowelsLowRest(string));
         System.out.println(camelCase(string));
@@ -134,30 +134,26 @@ public class StringOps {
 
         int i=0;
         int count =0;
+
         for (i=0;i<string.length(); i++)
         {
-            char ch = string.charAt(i);
-                if (ch == chr)
-                    count++;
+                if (string.charAt(i) == chr)
+                   { count++; }
         }
 
         int [] array = new int [count];
         int j=0;
+        i=0;
 
-        while (i<string.length())
-         { for (j=0;j<count;j++)
-            {char ch = string.charAt(i);
-               { if (ch == chr)
-                array[j] = i;
-               }
-            }
 
-             i++;     
-        
-        }
+        for (i=0;i<string.length();i++)
+               { if (string.charAt(i) == chr)
+                   { array[j] = i;
+                     j++;}
+
+                }    
 
         return array;
-    
 }
 }
 
